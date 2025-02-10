@@ -1,0 +1,314 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Indian Food Website
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <style>
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #1F3A56, #2C6E8F); /* Dark blue and teal */
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.8); /* Darker header */
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s;
+    }
+
+    header:hover {
+      background-color: rgba(0, 0, 0, 1); /* Slightly darker on hover */
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: #FFF;
+      text-decoration: none;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+
+    header nav ul li a:hover {
+      color: #F1A738; /* Gold on hover */
+    }
+
+    section {
+      padding: 40px;
+      margin: 20px auto;
+      max-width: 1200px;
+      background: rgba(0, 0, 0, 0.7); /* Slightly dark section background */
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s;
+    }
+
+    section:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    section h1, section h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: #F1A738; /* Gold for headings */
+    }
+
+    section img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .menu-item {
+      display: inline-block;
+      margin: 20px;
+      text-align: center;
+      transform: scale(1);
+      transition: transform 0.3s;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.1);
+    }
+
+    .menu-item img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu-item p {
+      color: #F1F1F1; /* Light gray text for item names */
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #fff;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    form button {
+      background-color: #F1A738; /* Gold button */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #E88B2D; /* Slightly darker gold on hover */
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      margin-top: 30px;
+    }
+
+    footer p {
+      font-size: 18px;
+    }
+
+    #customer, #contact {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #customer p, #contact p {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #F1F1F1; /* Light gray text */
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @media screen and (max-width: 768px) {
+      header nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .menu-item {
+        display: block;
+        width: 100%;
+      }
+
+      .menu-item img {
+        width: 80%;
+      }
+    }
+  </style>
+ </head>
+ <body>
+  <header>
+   <nav>
+    <ul>
+     <li>
+      <a href="#home">
+       Home
+      </a>
+     </li>
+     <li>
+      <a href="#menu">
+       Menu
+      </a>
+     </li>
+     <li>
+      <a href="#order">
+       Order
+      </a>
+     </li>
+     <li>
+      <a href="#customer">
+       Customer
+      </a>
+     </li>
+     <li>
+      <a href="#contact">
+       Contact
+      </a>
+     </li>
+     <li>
+      <a href="/login">
+        Login</a>
+      </li>
+     <li>
+      <a href="/signup">
+        Signup</a>
+      </li>
+    </ul>
+   </nav>
+  </header>
+  <section id="home">
+   <h1>
+    Welcome to Our Indian Rana Food Website
+   </h1>
+   <img src="static/images/main.png" alt="A variety of Indian dishes including curries, naan bread, and rice" />
+  </section>
+  <section id="menu">
+   <h2>
+    Menu
+   </h2>
+   <div class="menu-item">
+    <img alt="A plate of Biryani with colorful rice and pieces of chicken" src="static/images/biryani.png"/>
+    <p>
+     Biryani
+    </p>
+   </div>
+   <div class="menu-item">
+    <img alt="A bowl of Paneer Butter Masala with creamy tomato gravy and paneer cubes" src="static/images/ButterMasala.png"/>
+    <p>
+     Paneer Butter Masala
+    </p>
+   </div>
+   <div class="menu-item">
+    <img alt="A plate of Chole Bhature with spicy chickpeas and fluffy fried bread" src="static/images/CholeBhature.png"/>
+    <p>
+     Chole Bhature
+    </p>
+   </div>
+   <div class="menu-item">
+    <img alt="A plate of Samosas with crispy pastry and spicy potato filling" src="static/images/Samosas.png"/>
+    <p>
+     Samosas
+    </p>
+   </div>
+   <div class="menu-item">
+    <img alt="A bowl of Dal Makhani with creamy lentils and butter" src="static/images/DalMakhni.png"/>
+    <p>
+     Dal Makhani
+    </p>
+   </div>
+   <div class="menu-item">
+    <img alt="A plate of Tandoori Chicken with grilled chicken pieces and spices" src="static/images/TandoriChicken.png"/>
+    <p>
+     Tandoori Chicken
+    </p>
+   </div>
+  </section>
+  <section id="order">
+   <h2>
+    Order
+   </h2>
+   <form>
+    <input placeholder="Enter your name" required="" type="text"/>
+    <input placeholder="Enter your email" required="" type="email"/>
+    <textarea placeholder="Enter your order details" required=""></textarea>
+    <button type="submit">
+     Place Order
+    </button>
+   </form>
+  </section>
+  <section id="customer">
+   <h2>
+    Customer Feedback
+   </h2>
+   <p>
+    "Delicious food, fast delivery!" - John Doe
+   </p>
+   <p>
+    "Great variety of dishes, will order again." - Jane Smith
+   </p>
+   <p>
+    "Authentic taste, highly recommend!" - Raj Patel
+   </p>
+   <p>
+    "Best Indian food in town!" - Priya Singh
+   </p>
+  </section>
+  <section id="contact">
+   <h2>
+    Contact Us
+   </h2>
+   <p>
+    Email: vrana1300@gmail.com
+   </p>
+   <p>
+    Phone: 9027202892
+   </p>
+   <p>
+    Address: Moradabad, Uttar Pradesh, India
+   </p>
+  </section>
+  <footer>
+   <p>
+    © 2025 Indian Rana Food Website
+   </p>
+  </footer>
+ </body>
+</html>
