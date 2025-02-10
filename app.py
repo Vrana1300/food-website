@@ -4,11 +4,11 @@ import bcrypt
 
 app = Flask(__name__)
 
-# ✅ Database connection function (Fixed)
+# ✅ Database connection function
 def get_db_connection():
     conn = sqlite3.connect('database.db')  # Connect to SQLite database
     conn.row_factory = sqlite3.Row  # Enable column access by name
-    return conn  # ✅ Returning connection (NO conn.close() here)
+    return conn  
 
 # ✅ Create users table if it doesn't exist
 def create_table():
